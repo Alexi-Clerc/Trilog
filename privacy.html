@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de confidentialité — TriLog</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #0a1a40 0%, #1a3a7a 100%);
+            color: white;
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        header p  { font-size: 1rem; opacity: 0.75; }
+        main {
+            max-width: 760px;
+            margin: 40px auto;
+            padding: 0 24px 80px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0a1a40;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8eaf0;
+        }
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 20px 0 8px;
+            color: #1d1d1f;
+        }
+        p { margin-bottom: 12px; color: #3a3a3c; }
+        ul { margin: 8px 0 12px 20px; color: #3a3a3c; }
+        ul li { margin-bottom: 6px; }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e8f4e8;
+            color: #1a7a1a;
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .badge-blue {
+            background: #e8f0fb;
+            color: #1a3a7a;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .summary-item {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .summary-item .icon { font-size: 2rem; margin-bottom: 8px; }
+        .summary-item .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .summary-item .desc {
+            font-size: 0.82rem;
+            color: #6e6e73;
+            margin-top: 4px;
+        }
+        .highlight {
+            background: #f0f7ff;
+            border-left: 4px solid #1a3a7a;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 12px 0;
+            font-size: 0.92rem;
+            color: #1a3a7a;
+        }
+        footer {
+            text-align: center;
+            color: #6e6e73;
+            font-size: 0.82rem;
+            padding: 24px;
+        }
+        a { color: #1a3a7a; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🏊 TriLog</h1>
+    <p>Politique de confidentialité</p>
+</header>
+
+<main>
+
+    <!-- Résumé en un coup d'œil -->
+    <div class="card">
+        <h2>En un coup d'œil</h2>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <div class="icon">📱</div>
+                <div class="label">100% local</div>
+                <div class="desc">Toutes vos données restent sur votre iPhone</div>
+            </div>
+            <div class="summary-item">
+                <div class="icon">🚫</div>
+                <div class="label">Aucun serveur</div>
+                <div class="desc">Pas de compte, pas de cloud TriLog</div>
+            </div>
+            <div class="summary-item">
+                <div class="icon">🔒</div>
+                <div class="label">Aucun tracking</div>
+                <div class="desc">Pas de publicité, pas d'analytics</div>
+            </div>
+            <div class="summary-item">
+                <div class="icon">👤</div>
+                <div class="label">Aucune vente</div>
+                <div class="desc">Vos données ne sont jamais vendues ou partagées</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="card">
+        <h2>Introduction</h2>
+        <p>
+            TriLog est une application iOS de suivi et de planification d'entraînement triathlon
+            développée à titre personnel. Cette politique de confidentialité décrit de manière
+            transparente quelles données sont utilisées, comment et pourquoi.
+        </p>
+        <p>
+            <strong>En résumé : TriLog ne collecte, ne transmet et ne vend aucune donnée personnelle.
+            Tout reste sur votre appareil.</strong>
+        </p>
+    </div>
+
+    <!-- Données stockées localement -->
+    <div class="card">
+        <h2>Données stockées sur votre appareil</h2>
+        <p>TriLog stocke les informations suivantes <strong>exclusivement en local</strong>,
+        dans la base de données SwiftData de votre iPhone :</p>
+        <ul>
+            <li>Votre plan d'entraînement (catégorie triathlon, date de course, nom de la course)</li>
+            <li>Vos séances réalisées (discipline, durée, distance, fréquence cardiaque, allure…)</li>
+            <li>Vos données physiologiques (FTP, FC max, FC de repos)</li>
+            <li>Vos estimations de temps de course</li>
+            <li>Vos commentaires et ressenti RPE sur les séances</li>
+        </ul>
+        <div class="highlight">
+            Ces données ne quittent jamais votre appareil via TriLog.
+            Elles peuvent être supprimées à tout moment depuis Réglages → Données → Réinitialiser.
+        </div>
+    </div>
+
+    <!-- Apple Santé / HealthKit -->
+    <div class="card">
+        <h2>Apple Santé (HealthKit)</h2>
+        <span class="badge">✓ Lecture uniquement</span>
+        <p>
+            Si vous l'autorisez, TriLog peut lire vos séances sportives depuis l'app Apple Santé
+            (Apple Watch, autres applications compatibles) afin de les importer automatiquement
+            dans votre journal d'entraînement.
+        </p>
+        <h3>Ce que TriLog lit :</h3>
+        <ul>
+            <li>Type de séance (natation, vélo, course, musculation)</li>
+            <li>Durée, distance, calories</li>
+            <li>Fréquence cardiaque (moyenne et maximale)</li>
+            <li>Vitesse, allure, dénivelé</li>
+        </ul>
+        <h3>Ce que TriLog ne fait jamais :</h3>
+        <ul>
+            <li>Écrire dans Apple Santé</li>
+            <li>Transmettre vos données HealthKit à un tiers ou à nos serveurs</li>
+            <li>Accéder à d'autres données de santé (poids, sommeil, nutrition, etc.)</li>
+        </ul>
+        <div class="highlight">
+            Vous pouvez révoquer l'accès à tout moment dans
+            Réglages iOS → Santé → Applications → TriLog.
+        </div>
+    </div>
+
+    <!-- Strava -->
+    <div class="card">
+        <h2>Connexion Strava (optionnelle)</h2>
+        <span class="badge badge-blue">OAuth 2.0 sécurisé</span>
+        <p>
+            TriLog propose une connexion optionnelle à votre compte Strava pour importer
+            vos activités. Cette connexion utilise le protocole OAuth 2.0 officiel de Strava :
+            vous êtes redirigé vers le site de Strava pour vous authentifier, TriLog
+            <strong>ne voit jamais votre mot de passe Strava</strong>.
+        </p>
+        <h3>Ce qui est stocké :</h3>
+        <ul>
+            <li>Un <em>token d'accès</em> et un <em>refresh token</em> Strava, stockés dans
+                le <strong>Keychain iOS sécurisé</strong> de votre appareil</li>
+            <li>Les activités importées (identiques aux données HealthKit listées ci-dessus)</li>
+        </ul>
+        <h3>Ce que TriLog ne fait pas :</h3>
+        <ul>
+            <li>Écrire, modifier ou supprimer des activités sur Strava</li>
+            <li>Accéder à votre profil Strava, vos suivis ou vos segments</li>
+            <li>Transmettre vos tokens Strava à qui que ce soit</li>
+        </ul>
+        <div class="highlight">
+            Vous pouvez déconnecter Strava à tout moment depuis Réglages → Strava dans l'app,
+            ce qui supprime les tokens de votre Keychain.
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div class="card">
+        <h2>Notifications</h2>
+        <p>
+            Si vous l'autorisez, TriLog envoie des <strong>notifications locales</strong>
+            (rappels de séance, alertes J-7 et jour de course). Ces notifications sont
+            générées et affichées entièrement sur votre appareil, sans passer par un
+            serveur externe.
+        </p>
+        <p>
+            Aucune donnée liée aux notifications n'est transmise à TriLog ou à des tiers.
+        </p>
+    </div>
+
+    <!-- Ce que nous ne faisons pas -->
+    <div class="card">
+        <h2>Ce que TriLog ne fait absolument pas</h2>
+        <ul>
+            <li>❌ Créer un compte utilisateur ou collecter votre adresse e-mail</li>
+            <li>❌ Envoyer vos données à des serveurs TriLog</li>
+            <li>❌ Utiliser des outils d'analytics (Firebase, Mixpanel, Amplitude, etc.)</li>
+            <li>❌ Afficher de la publicité ou utiliser vos données à des fins publicitaires</li>
+            <li>❌ Vendre, louer ou partager vos données avec des tiers</li>
+            <li>❌ Effectuer un suivi cross-app ou cross-site</li>
+        </ul>
+    </div>
+
+    <!-- Sécurité -->
+    <div class="card">
+        <h2>Sécurité</h2>
+        <p>
+            Les données sensibles (tokens Strava) sont stockées dans le
+            <strong>Keychain iOS</strong>, le mécanisme de stockage sécurisé d'Apple,
+            chiffré par défaut et lié à votre appareil.
+        </p>
+        <p>
+            Les données d'entraînement sont stockées via <strong>SwiftData</strong>,
+            la base de données locale d'Apple, protégée par le chiffrement du système iOS.
+        </p>
+    </div>
+
+    <!-- Enfants -->
+    <div class="card">
+        <h2>Enfants</h2>
+        <p>
+            TriLog est destiné à des adultes pratiquant le triathlon. L'application ne
+            collecte sciemment aucune donnée de personnes de moins de 13 ans.
+        </p>
+    </div>
+
+    <!-- Modifications -->
+    <div class="card">
+        <h2>Modifications de cette politique</h2>
+        <p>
+            En cas de modification significative de cette politique (par exemple, ajout
+            d'une fonctionnalité impliquant une connexion réseau), une mise à jour sera
+            publiée à cette adresse et la date de dernière mise à jour sera actualisée.
+        </p>
+        <p>
+            La poursuite de l'utilisation de l'application après modification vaut
+            acceptation de la politique mise à jour.
+        </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+        <h2>Contact</h2>
+        <p>
+            Pour toute question relative à cette politique de confidentialité ou à vos
+            données, vous pouvez contacter le développeur à l'adresse suivante :
+        </p>
+        <p>
+            📧 <a href="mailto:trilog.app@gmail.com">trilog.app@gmail.com</a>
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    <p>Dernière mise à jour : avril 2026 · TriLog — Compagnon triathlon intelligent</p>
+    <p style="margin-top:8px;">
+        <a href="https://apps.apple.com/app/trilog">Télécharger sur l'App Store</a>
+    </p>
+</footer>
+
+</body>
+</html>
