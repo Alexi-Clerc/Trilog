@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TriLog — Support / Help</title>
+  <style>
+    :root {
+      --blue: #0A84FF;
+      --bg: #F2F2F7;
+      --card: #FFFFFF;
+      --text: #1C1C1E;
+      --sub: #6E6E73;
+      --border: #E5E5EA;
+      --radius: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1C1C1E;
+        --card: #2C2C2E;
+        --text: #F2F2F7;
+        --sub: #AEAEB2;
+        --border: #3A3A3C;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px 60px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    .header { text-align: center; padding: 40px 0 32px; }
+    .header .icon { font-size: 56px; display: block; margin-bottom: 12px; }
+    .header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+    .header .subtitle { color: var(--sub); font-size: 15px; margin-top: 6px; }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .lang-switch a {
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      color: var(--sub);
+      transition: all .15s;
+    }
+    .lang-switch a.active, .lang-switch a:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .card h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2 .emoji { font-size: 20px; }
+    .card p { font-size: 15px; color: var(--sub); margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card ul { list-style: none; padding: 0; }
+    .card ul li {
+      font-size: 15px;
+      color: var(--sub);
+      padding: 5px 0 5px 20px;
+      position: relative;
+    }
+    .card ul li::before {
+      content: "•";
+      color: var(--blue);
+      position: absolute;
+      left: 4px;
+    }
+    .highlight {
+      background: rgba(10, 132, 255, 0.08);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .lang-section { display: none; }
+    .lang-section.visible { display: block; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      color: var(--sub);
+      font-size: 13px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <span class="icon">🏊🚴🏃</span>
+    <h1>TriLog</h1>
+    <p class="subtitle">Support · Help</p>
+  </div>
+
+  <div class="lang-switch">
+    <a href="#" class="active" onclick="setLang('fr'); return false;" id="btn-fr">🇫🇷 Français</a>
+    <a href="#" onclick="setLang('en'); return false;" id="btn-en">🇬🇧 English</a>
+  </div>
+
+  <div class="lang-section visible" id="lang-fr">
+    <div class="highlight">
+      Besoin d'aide avec TriLog ? Écris-nous et nous répondrons dès que possible.
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">✉️</span>Nous contacter</h2>
+      <p>Pour une question, un bug ou une suggestion :</p>
+      <p><a href="mailto:trilog.app@gmail.com" style="font-weight: 600;">trilog.app@gmail.com</a></p>
+      <p>Si tu signales un bug, ajoute si possible ton modèle d'iPhone, ta version iOS et les étapes pour reproduire le problème.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">🔗</span>Connexion Strava</h2>
+      <ul>
+        <li>Vérifie que tu as une connexion internet active.</li>
+        <li>Reconnecte Strava depuis Réglages → Strava si la session a expiré.</li>
+        <li>Utilise "Synchroniser maintenant" pour importer les nouvelles activités.</li>
+        <li>Utilise "Resync complet" seulement si des activités anciennes manquent.</li>
+      </ul>
+      <p>TriLog importe tes activités en lecture seule et ne publie rien sur ton compte Strava.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">📅</span>Plans d'entraînement</h2>
+      <ul>
+        <li>Tu peux choisir ta distance cible lors de l'onboarding.</li>
+        <li>Les jours d'entraînement se règlent dans Réglages → Jours d'entraînement.</li>
+        <li>Changer la date de course peut régénérer le plan.</li>
+        <li>Les séances déjà réalisées sont conservées lors d'une régénération.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">🗑️</span>Données et confidentialité</h2>
+      <p>TriLog stocke tes données localement sur ton appareil. Pour plus de détails, consulte la politique de confidentialité :</p>
+      <p><a href="https://alexi-clerc.github.io/Trilog/privacy.html">Politique de confidentialité</a></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">💡</span>Suggestions</h2>
+      <p>TriLog évolue grâce aux retours des utilisateurs. Si une métrique, une vue ou un comportement te manque, envoie-nous un message.</p>
+    </div>
+  </div>
+
+  <div class="lang-section" id="lang-en">
+    <div class="highlight">
+      Need help with TriLog? Send us a message and we will reply as soon as possible.
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">✉️</span>Contact Us</h2>
+      <p>For questions, bug reports, or suggestions:</p>
+      <p><a href="mailto:trilog.app@gmail.com" style="font-weight: 600;">trilog.app@gmail.com</a></p>
+      <p>If you report a bug, please include your iPhone model, iOS version, and the steps needed to reproduce the issue.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">🔗</span>Strava Connection</h2>
+      <ul>
+        <li>Make sure you have an active internet connection.</li>
+        <li>Reconnect Strava from Settings → Strava if your session has expired.</li>
+        <li>Use "Sync Now" to import new activities.</li>
+        <li>Use "Full Resync" only if older activities are missing.</li>
+      </ul>
+      <p>TriLog imports your activities in read-only mode and never posts anything to your Strava account.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">📅</span>Training Plans</h2>
+      <ul>
+        <li>You can choose your target distance during onboarding.</li>
+        <li>Training days can be edited in Settings → Training Days.</li>
+        <li>Changing the race date may regenerate the plan.</li>
+        <li>Already completed workouts are preserved when the plan is regenerated.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">🗑️</span>Data and Privacy</h2>
+      <p>TriLog stores your data locally on your device. For more details, read the privacy policy:</p>
+      <p><a href="https://alexi-clerc.github.io/Trilog/privacy.html">Privacy Policy</a></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">💡</span>Suggestions</h2>
+      <p>TriLog improves through user feedback. If a metric, view, or behavior is missing, send us a message.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>TriLog · <a href="mailto:trilog.app@gmail.com">trilog.app@gmail.com</a></p>
+    <p style="margin-top: 6px;"><a href="https://alexi-clerc.github.io/Trilog/privacy.html">Privacy Policy</a></p>
+    <p style="margin-top: 6px;">Last updated: May 2026</p>
+  </footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('lang-fr').classList.toggle('visible', lang === 'fr');
+    document.getElementById('lang-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+
+  (function() {
+    var nav = navigator.language || navigator.userLanguage || 'fr';
+    if (!nav.toLowerCase().startsWith('fr')) setLang('en');
+  })();
+</script>
+</body>
+</html>
